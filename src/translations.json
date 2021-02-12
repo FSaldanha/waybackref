@@ -1,0 +1,36 @@
+{
+  "en-US": {
+    "loading": "Loading...",
+    "change_language": "Versão em português",
+    "about-label": "About",
+    "subtitle": "Make your references time-proof!",
+    "style": "Select a style",
+    "editor": "Copy references from your work and paste here",
+    "btn": "Convert my references",
+    "no_style_selected": "Please select a style",
+    "restart": "Start again",
+    "about": "<p>Citation of electronic documents is a valuable resource for scientific production. However, content published in internet can be changed or go offline. The <wm>Wayback Machine</wm> service, provided by <ia>Internet Archive</ia>, helps to solve that problem by saving web pages and making them available for public access.</p><p><strong>Wayback References</strong> gets URLs used in user references list and checks whether they were archived by Wayback Machine, replacing them with a link to snapshot. As the service periodically saves pages, the app also gets the access date from each reference and looks for the archived snapshot with the closest timestamp to that date.</p><p>For references using <doi>DOI</doi>, URL is not changed because DOI system makes sure the link will always direct to the right document.</p>",
+    "created-by": "Created by",
+    "github": "See on GitHub",
+    "results": "Found {TR} reference(s). {RWU} have URL ({RWD} have DOI) and {RWOU} don't have.",
+    "copy": "Copy references to clipboard",
+    "copied": "Successfully copied"
+  },
+  "pt-BR": {
+    "loading": "Carregando...",
+    "change_language": "English version",
+    "about-label": "Sobre",
+    "subtitle": "Torne as suas referências à prova do tempo!",
+    "style": "Selecione um estilo",
+    "editor": "Copie as referências do arquivo do seu trabalho e cole aqui",
+    "btn": "Converter minhas referências",
+    "no_style_selected": "Por favor, selecione um estilo",
+    "restart": "Voltar para o início",
+    "about": "<p>A citação de documentos eletrônicos é um recurso valioso para a produção científica. Porém, conteúdos publicados na internet podem ser alterados ou sair do ar. O serviço <wm>Wayback Machine</wm>, mantido pelo <ia>Internet Archive</ia>, ajuda a resolver esse problema salvando páginas web e disponibilizando-as para consulta pública.</p><p>O <strong>Wayback References</strong> obtém as URLs utilizadas na lista de referências do usuário e verifica se foram arquivadas pelo Wayback Machine, substituindo-as pelo link para uma cópia. Como o serviço salva páginas periodicamente, o aplicativo também obtém a data de acesso de cada referência e procura pela cópia que tenha sido arquivada no momento mais próximo àquela data.</p><p>No caso das referências que utilizam <doi>DOI</doi>, a URL não é alterada, pois o sistema DOI garante que o endereço será sempre direcionado para o documento correto.</p>",
+    "created-by": "Criado por",
+    "github": "Veja no GitHub",
+    "results": "{TR} referência(s) encontrada(s), sendo {RWU} com URL ({RWD} com DOI) e {RWOU} sem URL.",
+    "copy": "Copiar referências",
+    "copied": "Copiado com sucesso"
+  }
+}
