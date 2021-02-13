@@ -202,7 +202,7 @@ export default function App() {
         <footer>
           <div className="container">
             <p><FormattedMessage id="created-by" /> <a href="https://fsaldanha.com.br/" target="_blank">Felipe Saldanha</a></p>
-            <p><a href="#"><FormattedMessage id="github" /></a></p>
+            <p><a href="https://github.com/FSaldanha/waybackref" target="_blank"><FormattedMessage id="github" /></a></p>
           </div>
         </footer>
       </div>

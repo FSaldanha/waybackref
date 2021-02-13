@@ -2,9 +2,9 @@
 
 ![GitHub license](https://img.shields.io/github/license/FSaldanha/waybackref)
 
-# Make your references time-proof!
+### Make your references time-proof!
 
-### About
+## About
 
 Citation of electronic documents is a valuable resource for scientific production. However, content published in internet can be changed or go offline. The [Wayback Machine](https://web.archive.org/) service, provided by [Internet Archive](https://archive.org/), helps to solve that problem by saving web pages and making them available for public access.
 
@@ -12,11 +12,11 @@ Citation of electronic documents is a valuable resource for scientific productio
 
 For references using [DOI](https://www.doi.org/), URL is not changed because DOI system makes sure the link will always direct to the right document.
 
-### Credits
+## Credits
 
 Copyright (C) 2021 [Felipe Saldanha](https://fsaldanha.com.br)
 
-### License
+## License
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
