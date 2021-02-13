@@ -12,10 +12,12 @@ Citation of electronic documents is a valuable resource for scientific productio
 
 For references using [DOI](https://www.doi.org/), URL is not changed because DOI system makes sure the link will always direct to the right document.
 
-### License
-
-[GNU General Public License v3.0](LICENSE.md)
-
 ### Credits
 
 Copyright (C) 2021 [Felipe Saldanha](https://fsaldanha.com.br)
+
+### License
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU General Public License](LICENSE.md) for more details.
