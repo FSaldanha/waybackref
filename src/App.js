@@ -5,6 +5,9 @@ import translations from './translations.json'
 import { Editor, EditorState } from "draft-js";
 import "draft-js/dist/Draft.css";
 import { stateToHTML } from 'draft-js-export-html';
+import { ReactComponent as File } from './file.svg';
+import { ReactComponent as Button } from './button.svg';
+import { ReactComponent as Forever } from './forever.svg';
 
 const editorText = <FormattedMessage id="editor" />
 
@@ -20,6 +23,7 @@ export default function App() {
   const [submitBtnClasses, setSubmitBtnClasses] = useState("btn disabled");
   const [loading, setLoading] = useState(false);
   const [editorIsBlank, isEditorBlank] = useState(true);
+  const [explanationIsVisible, isExplanationVisible] = useState("visible");
 
   const changeLanguage = _ => {
     if (locale == "pt-BR") {
@@ -46,6 +50,12 @@ export default function App() {
         setStyleError(<FormattedMessage id="no_style_selected" />);
         document.querySelector('.editor').style.borderColor = "red";
       } else {
+        document.querySelector('main').scrollIntoView({
+          behavior: 'smooth'
+        });
+        localStorage.explanationIsVisible = 'hidden';
+        isExplanationVisible('hidden');
+        document.querySelector('#introduction').style.display = "none";
         document.querySelector('#first-step').style.display = "none";
         document.querySelector('#second-step').style.display = "block";
         const contentState = editorState.getCurrentContent();
@@ -82,6 +92,7 @@ export default function App() {
   }
 
   const restart = _ => {
+    document.querySelector('#introduction').style.display = "block";
     document.querySelector('#first-step').style.display = "block";
     document.querySelector('#second-step').style.display = "none";
     document.querySelector('.editor').style.borderColor = "#ccc";
@@ -115,6 +126,21 @@ export default function App() {
     alert(intl.formatMessage({ id: 'copied' }));
   }
 
+  if (!localStorage.getItem('explanationIsVisible')) {
+    localStorage.explanationIsVisible = 'visible'
+  }
+
+  const toggleExplanation = _ => {
+    let newStatus;
+    if (explanationIsVisible == 'visible') {
+      newStatus = 'hidden';
+    } else {
+      newStatus = 'visible';
+    }
+    isExplanationVisible(newStatus);
+    localStorage.explanationIsVisible = newStatus;
+  }
+
   return (
     <RawIntlProvider value={intl}>
       <div>
@@ -133,8 +159,42 @@ export default function App() {
         </header>
         <main>
           <div className="container">
+            <div id="introduction">
+              <h2><FormattedMessage id="subtitle" values={{ br: <br /> }} /></h2>
+              {explanationIsVisible == 'visible' &&
+                <>
+                  <div id="toggle" onClick={toggleExplanation}>
+                    <FormattedMessage id="hide_explanation" /> ▲
+                  </div>
+                  <div id="three-steps">
+                    <div>
+                      <div className="icon">
+                        <File />
+                      </div>
+                      <p><b>1.</b> <FormattedMessage id="step1" /></p>
+                    </div>
+                    <div>
+                      <div className="icon">
+                        <Button />
+                      </div>
+                      <p><b>2.</b> <FormattedMessage id="step2" /></p>
+                    </div>
+                    <div>
+                      <div className="icon">
+                        <Forever />
+                      </div>
+                      <p><b>3.</b> <FormattedMessage id="step3" /></p>
+                    </div>
+                  </div>
+                </>
+              }
+              {explanationIsVisible == 'hidden' &&
+                <div id="toggle" onClick={toggleExplanation}>
+                  <FormattedMessage id="show_explanation" /> ▼
+                </div>
+              }
+            </div>
             <div id="first-step">
-              <h2><FormattedMessage id="subtitle" /></h2>
               <div
                 className="editor"
                 onClick={focusEditor}
@@ -201,7 +261,7 @@ export default function App() {
         </section>
         <footer>
           <div className="container">
-            <p><FormattedMessage id="created-by" /> <a href="https://fsaldanha.com.br/" target="_blank">Felipe Saldanha</a></p>
+            <p><FormattedMessage id="created-by" /> <a href="https://fsaldanha.com.br/" target="_blank">Felipe Saldanha</a>. Icons by <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a>.</p>
             <p><a href="https://github.com/FSaldanha/waybackref" target="_blank"><FormattedMessage id="github" /></a></p>
           </div>
         </footer>

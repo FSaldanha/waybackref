@@ -100,7 +100,47 @@ h2, .status {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+
+#three-steps {
+  margin-bottom: 1.5rem;
+}
+
+#three-steps > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: #ccc;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.icon svg {
+  width: 75px;
+  height: 75px;
+}
+
+#toggle {
+  grid-column: 1 / 4;
+  max-width: 200px;
+  margin: 1.5rem 0 3rem auto;
+  text-align: right;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #777;
+}
+
+#toggle:hover {
+  color: #555;
 }
 
 .editor {
@@ -145,7 +185,7 @@ footer .container {
 
 #first-step,
 #second-step {
-  height: 600px;
+  height: 500px;
 }
 
 #second-step {
@@ -192,10 +232,24 @@ footer .container {
     text-align: left;
   }
   
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  #three-steps {
+    /* display: flex; */
+    display: grid;
+    grid-column-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #three-steps > div {
+    /* flex: 1; */
+  }
+
   .menu {
     /* grid-column: 2 / 3; */
     margin-left: auto;
-    justify-self: end;
     /* align-items: center; */
     align-self: stretch;
   }
