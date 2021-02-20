@@ -160,12 +160,13 @@ export default function App() {
         <main>
           <div className="container">
             <div id="introduction">
-              <h2><FormattedMessage id="subtitle" values={{ br: <br /> }} /></h2>
+
               {explanationIsVisible == 'visible' &&
                 <>
                   <div id="toggle" onClick={toggleExplanation}>
                     <FormattedMessage id="hide_explanation" /> ▲
                   </div>
+                  <h2><FormattedMessage id="subtitle" values={{ br: <br /> }} /></h2>
                   <div id="three-steps">
                     <div>
                       <div className="icon">
@@ -186,6 +187,7 @@ export default function App() {
                       <p><b>3.</b> <FormattedMessage id="step3" /></p>
                     </div>
                   </div>
+                  <p id="features"><FormattedMessage id="features" /></p>
                 </>
               }
               {explanationIsVisible == 'hidden' &&
@@ -261,7 +263,17 @@ export default function App() {
         </section>
         <footer>
           <div className="container">
-            <p><FormattedMessage id="created-by" /> <a href="https://fsaldanha.com.br/" target="_blank">Felipe Saldanha</a>. Icons by <a href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a>.</p>
+            <p>
+              <FormattedMessage
+                id="created-by"
+                values={{
+                  p: chunks => <p>{chunks}</p>,
+                  strong: chunks => <strong>{chunks}</strong>,
+                  fs: chunks => <a href="https://fsaldanha.com.br/" target="_blank">{chunks}</a>,
+                  fp: chunks => <a href="https://www.flaticon.com/authors/freepik" target="_blank">{chunks}</a>
+                }}
+              />
+            </p>
             <p><a href="https://github.com/FSaldanha/waybackref" target="_blank"><FormattedMessage id="github" /></a></p>
           </div>
         </footer>

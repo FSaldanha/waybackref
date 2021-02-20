@@ -129,6 +129,12 @@ h2 {
   height: 75px;
 }
 
+#features {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 4rem;
+}
+
 #toggle {
   grid-column: 1 / 4;
   max-width: 200px;
